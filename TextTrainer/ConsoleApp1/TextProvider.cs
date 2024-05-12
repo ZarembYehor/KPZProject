@@ -9,23 +9,7 @@ namespace ConsoleApp1
     public class TextProvider
     {
         private static TextProvider _instance;
-        private TextProvider() { }
-
-        public static TextProvider Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new TextProvider();
-                }
-                return _instance;
-            }
-        }
-
-        public string GetRandomText()
-        {
-            string[] texts = {
+        private string[] texts = {
             "Hello World",
             "Programming in C#",
             "Design Patterns",
@@ -84,8 +68,31 @@ namespace ConsoleApp1
             "Global Economic Trends Analysis",
             "Future Technologies Forecast"
         };
+        private TextProvider() { }
+
+        public static TextProvider Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new TextProvider();
+                }
+                return _instance;
+            }
+        }
+
+        public string[] GetRandomWords(int wordCount)
+        {
             Random rand = new Random();
-            return texts[rand.Next(texts.Length)];
+            string selectedText = this.texts[rand.Next(this.texts.Length)];
+
+            string[] words = selectedText.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            // Вибираємо випадкові слова з тексту
+            string[] selectedWords = words.OrderBy(w => rand.Next()).Take(wordCount).ToArray();
+
+            return selectedWords;
         }
     }
 }
