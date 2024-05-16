@@ -8,6 +8,6 @@ namespace ConsoleApp1
 {
     public interface IAccuracyCalculationStrategy
     {
-        double CalculateAccuracy(string expectedText, string actualText);
+        string CalculateAccuracy(string expectedText, string actualText);
     }
 }

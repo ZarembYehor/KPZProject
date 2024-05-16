@@ -8,7 +8,9 @@ namespace ConsoleApp1
 {
     public class BasicAccuracyStrategy : IAccuracyCalculationStrategy
     {
-        public double CalculateAccuracy(string expectedText, string actualText)
+        private List<string> sessionResults = new List<string>();
+
+        public string CalculateAccuracy(string expectedText, string actualText)
         {
             int totalChars = expectedText.Length;
             int correctChars = 0;
@@ -21,7 +23,29 @@ namespace ConsoleApp1
                 }
             }
 
-            return (double)correctChars / totalChars * 100;
+            double accuracy = (double)correctChars / totalChars * 100;
+
+            string result = $"{accuracy:F2}%";
+            this.sessionResults.Add(result);
+
+            return result;
+        }
+
+        public string CalculateOverallAccuracy()
+        {
+            double totalAccuracy = 0;
+
+            foreach (string result in this.sessionResults)
+            {
+                Console.WriteLine(result);
+                if (double.TryParse(result.Trim('%'), out double accuracy))
+                {
+                    totalAccuracy += accuracy; 
+                }
+            }
+
+            double overallAccuracy = totalAccuracy / this.sessionResults.Count; 
+            return $"Overall Accuracy: {overallAccuracy:F2}%";
         }
     }
 }
