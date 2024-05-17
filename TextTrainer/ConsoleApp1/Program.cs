@@ -1,104 +1,60 @@
 ﻿using ConsoleApp1;
 
-TrainingResultManager resultManager = new TrainingResultManager();
+var accuracyStrategy = new BasicAccuracyStrategy();
+var eventNotifier = new EventNotifier();
+var resultManager = new TrainingResultManager();
+var chooseDifficulty = new TrainingDifficultyManager();
 
-// Проведення тренувальних сесій і збереження результатів
-for (int i = 0; i < 3; i++)
+Console.WriteLine("Choose training difficulty:");
+Console.WriteLine("1. Easy");
+Console.WriteLine("2. Medium");
+Console.WriteLine("3. Hard");
+Console.Write("Enter your choice: ");
+
+int choice;
+while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 3)
 {
-    TrainingSessionResult sessionResult = ConductTrainingSession();
-    resultManager.AddResult(sessionResult);
-    Console.WriteLine($"Training Session {i + 1} completed.");
+    Console.WriteLine("Invalid choice. Please enter a number between 1 and 3.");
+    Console.Write("Enter your choice: ");
+}
+
+DifficultyLevel difficulty;
+switch (choice)
+{
+    case 1:
+        difficulty = DifficultyLevel.Easy;
+        break;
+    case 2:
+        difficulty = DifficultyLevel.Medium;
+        break;
+    case 3:
+        difficulty = DifficultyLevel.Hard;
+        break;
+    default:
+        throw new ArgumentException("Invalid choice.");
+}
+
+var trainingSession = new TrainingSession(accuracyStrategy, eventNotifier, resultManager, chooseDifficulty, difficulty);
+
+Console.WriteLine($"Training Session (Difficulty: {difficulty}):");
+Console.WriteLine("-------------------------------");
+
+double totalAccuracy = 0;
+double totalTime = 0;
+
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine($"Training Session {i + 1}:");
+    Console.WriteLine("-------------------------------");
+    var sessionResult = trainingSession.StartSession();
+    totalAccuracy += double.Parse(sessionResult.Substring(0, sessionResult.Length - 1));
+    totalTime += trainingSession.GetTotalTimeInSeconds();
     Console.WriteLine();
 }
 
-// Виведення історії тренувань
-resultManager.PrintTrainingHistory();
+string overallAccuracy = accuracyStrategy.CalculateOverallAccuracy();
+Console.WriteLine($"Overall Accuracy: {overallAccuracy}");
 
-// Збереження історії тренувань у файл
-resultManager.SaveResultsToFile("training_history.txt");
+Console.WriteLine($"Total Training Time: {TimeSpan.FromSeconds(totalTime)}");
 
-static TrainingSessionResult ConductTrainingSession()
-{
-    // Симулюємо тренувальну сесію і отримуємо результат
-    TrainingSessionResult sessionResult = new TrainingSessionResult();
-    sessionResult.StartTime = DateTime.Now;
-
-    // Припустимо, що тренувальна сесія триває 5 секунд
-    Thread.Sleep(5000);
-
-    // Генеруємо випадкову точність для прикладу
-    Random rand = new Random();
-    sessionResult.Accuracy = $"{rand.NextDouble() * 100}";
-
-    sessionResult.EndTime = DateTime.Now;
-    return sessionResult;
-}
-/*
-static void TestBasicAccuracyStrategy()
-{
-    var accuracyStrategy = new BasicAccuracyStrategy();
-    var eventNotifier = new EventNotifier();
-
-    var trainingSession = new TrainingSession(accuracyStrategy, eventNotifier);
-    List<string> sessionResults = new List<string>();
-
-    Console.WriteLine("Basic Accuracy Strategy Test:");
-    Console.WriteLine("-------------------------------");
-
-    // Початок відліку часу
-    Stopwatch stopwatch = new Stopwatch();
-    stopwatch.Start();
-
-    for (int i = 0; i < 5; i++)
-    {
-        Console.WriteLine($"Training Session {i + 1}:");
-        Console.WriteLine("-------------------------------");
-        trainingSession.StartSession();
-        sessionResults.Add(trainingSession.GetTotalTimeInSeconds().ToString()); // Додаємо час сесії до списку результатів
-        Console.WriteLine();
-    }
-
-    // Зупинка таймера
-    stopwatch.Stop();
-
-    // Виведення часу виконання тесту
-    Console.WriteLine($"Total time taken: {stopwatch.Elapsed.TotalSeconds} seconds");
-
-    // Розрахунок загальної точності і виведення результатів
-    // (код для обчислення загальної точності)
-}
-
-static void TestAdvancedAccuracyStrategy()
-{
-    var accuracyStrategy = new AdvancedAccuracyStrategy();
-    var eventNotifier = new EventNotifier();
-
-    var trainingSession = new TrainingSession(accuracyStrategy, eventNotifier);
-    List<string> sessionResults = new List<string>();
-
-    Console.WriteLine("Advanced Accuracy Strategy Test:");
-    Console.WriteLine("-------------------------------");
-
-    // Початок відліку часу
-    Stopwatch stopwatch = new Stopwatch();
-    stopwatch.Start();
-
-    for (int i = 0; i < 5; i++)
-    {
-        Console.WriteLine($"Training Session {i + 1}:");
-        Console.WriteLine("-------------------------------");
-        trainingSession.StartSession();
-        sessionResults.Add(trainingSession.GetTotalTimeInSeconds().ToString()); // Додаємо час сесії до списку результатів
-        Console.WriteLine();
-    }
-
-    // Зупинка таймера
-    stopwatch.Stop();
-
-    // Виведення часу виконання тесту
-    Console.WriteLine($"Total time taken: {stopwatch.Elapsed.TotalSeconds} seconds");
-
-    // Розрахунок загальної точності і виведення результатів
-    // (код для обчислення загальної точності)
-}
-*/
+resultManager.SaveResultsToFile("training_results.txt");

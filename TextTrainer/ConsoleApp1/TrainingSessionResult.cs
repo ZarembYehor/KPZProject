@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public string Accuracy { get; set; }
+        public double Accuracy { get; set; }
 
         public override string ToString()
         {

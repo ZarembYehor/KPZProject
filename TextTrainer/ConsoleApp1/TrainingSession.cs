@@ -13,20 +13,24 @@ namespace ConsoleApp1
         private readonly EventNotifier _eventNotifier;
         private readonly Stopwatch _stopwatch;
         private readonly TrainingResultManager _resultManager;
+        private readonly DifficultyLevel _difficulty;
+        private readonly TrainingDifficultyManager _chooseDifficulty;
 
-        public TrainingSession(IAccuracyCalculationStrategy accuracyStrategy, EventNotifier eventNotifier, TrainingResultManager resultManager)
+        public TrainingSession(IAccuracyCalculationStrategy accuracyStrategy, EventNotifier eventNotifier, TrainingResultManager resultManager, TrainingDifficultyManager chooseDifficulty, DifficultyLevel difficulty)
         {
             _accuracyStrategy = accuracyStrategy;
             _eventNotifier = eventNotifier;
             _stopwatch = new Stopwatch();
             _resultManager = resultManager;
+            _chooseDifficulty= chooseDifficulty;
+            _difficulty = difficulty;
         }
 
-        public void StartSession()
+        public string StartSession()
         {
             _stopwatch.Start();
             var textProvider = TextProvider.Instance;
-            var randomWords = textProvider.GetRandomWords(1);
+            var randomWords = textProvider.GetRandomWords(_chooseDifficulty.GetWordCountForDifficulty(_difficulty));
             var textToType = string.Join(" ", randomWords);
             Console.WriteLine("Type the following text:");
             Console.WriteLine(textToType);
@@ -44,9 +48,11 @@ namespace ConsoleApp1
             _resultManager.AddResult(new TrainingSessionResult
             {
                 StartTime = DateTime.Now,
-                EndTime = DateTime.Now,
-                Accuracy = sessionResult
+                EndTime = DateTime.Now.AddSeconds(_stopwatch.Elapsed.TotalSeconds),
+                Accuracy = double.Parse(sessionResult.Substring(0, sessionResult.Length - 1))
             });
+
+            return sessionResult;
         }
 
         public double GetTotalTimeInSeconds()
@@ -54,4 +60,5 @@ namespace ConsoleApp1
             return _stopwatch.Elapsed.TotalSeconds;
         }
     }
+
 }

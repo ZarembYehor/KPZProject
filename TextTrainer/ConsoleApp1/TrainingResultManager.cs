@@ -48,6 +48,26 @@ namespace ConsoleApp1
                 Console.WriteLine(result);
             }
         }
+
+        public void PrintExtendedStatistics()
+        {
+            double totalAccuracy = 0;
+            double totalTime = 0;
+            int sessionCount = _sessionResults.Count;
+
+            foreach (var result in _sessionResults)
+            {
+                totalAccuracy += result.Accuracy;
+                totalTime += (result.EndTime - result.StartTime).TotalSeconds;
+            }
+
+            double averageAccuracy = totalAccuracy / sessionCount;
+            double averageTimePerSession = totalTime / sessionCount;
+
+            Console.WriteLine("Extended Statistics:");
+            Console.WriteLine($"Average Accuracy: {averageAccuracy:F2}%");
+            Console.WriteLine($"Average Time Per Session: {averageTimePerSession:F2} seconds");
+        }
     }
 
 }
