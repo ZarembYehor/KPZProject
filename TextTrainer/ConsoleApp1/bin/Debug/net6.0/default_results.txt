@@ -1,0 +1,5 @@
+Start Time: 20.05.2024 0:05:08, End Time: 20.05.2024 0:05:20, Accuracy: 100,00%
+Best Accuracy: 100,00%
+Best Time: 11,7724246 seconds
+Selected Strategy: Basic
+Total Sessions: 1
