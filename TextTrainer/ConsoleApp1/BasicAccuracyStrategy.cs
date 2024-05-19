@@ -25,7 +25,7 @@ namespace ConsoleApp1
 
             double accuracy = (double)correctChars / totalChars * 100;
 
-            string result = $"{accuracy:F2}%";
+            string result = $"{accuracy:F2}";
             this.sessionResults.Add(result);
 
             return result;
@@ -38,13 +38,13 @@ namespace ConsoleApp1
             foreach (string result in this.sessionResults)
             {
                 Console.WriteLine(result);
-                if (double.TryParse(result.Trim('%'), out double accuracy))
+                if (double.TryParse(result, out double accuracy))
                 {
-                    totalAccuracy += accuracy; 
+                    totalAccuracy += accuracy;
                 }
             }
 
-            double overallAccuracy = totalAccuracy / this.sessionResults.Count; 
+            double overallAccuracy = totalAccuracy / this.sessionResults.Count;
             return $"Overall Accuracy: {overallAccuracy:F2}%";
         }
     }

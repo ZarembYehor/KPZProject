@@ -22,7 +22,7 @@ namespace ConsoleApp1
             _eventNotifier = eventNotifier;
             _stopwatch = new Stopwatch();
             _resultManager = resultManager;
-            _chooseDifficulty= chooseDifficulty;
+            _chooseDifficulty = chooseDifficulty;
             _difficulty = difficulty;
         }
 
@@ -45,12 +45,31 @@ namespace ConsoleApp1
 
             _stopwatch.Stop();
 
-            _resultManager.AddResult(new TrainingSessionResult
+            if (_accuracyStrategy is AdvancedAccuracyStrategy)
             {
-                StartTime = DateTime.Now,
-                EndTime = DateTime.Now.AddSeconds(_stopwatch.Elapsed.TotalSeconds),
-                Accuracy = double.Parse(sessionResult.Substring(0, sessionResult.Length - 1))
-            });
+                var parts = sessionResult.Split('/');
+                int correctChars = int.Parse(parts[0].Trim());
+                int totalChars = int.Parse(parts[1].Trim());
+
+                _resultManager.AddResult(new TrainingSessionResult
+                {
+                    StartTime = DateTime.Now,
+                    EndTime = DateTime.Now.AddSeconds(_stopwatch.Elapsed.TotalSeconds),
+                    CorrectChars = correctChars,
+                    TotalChars = totalChars,
+                    IsAdvancedStrategy = true
+                });
+            }
+            else
+            {
+                _resultManager.AddResult(new TrainingSessionResult
+                {
+                    StartTime = DateTime.Now,
+                    EndTime = DateTime.Now.AddSeconds(_stopwatch.Elapsed.TotalSeconds),
+                    AccuracyPercentage = double.Parse(sessionResult),
+                    IsAdvancedStrategy = false
+                });
+            }
 
             return sessionResult;
         }

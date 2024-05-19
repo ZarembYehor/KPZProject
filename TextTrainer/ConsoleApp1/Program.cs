@@ -1,60 +1,83 @@
 ﻿using ConsoleApp1;
+using System.Text;
 
-var accuracyStrategy = new BasicAccuracyStrategy();
-var eventNotifier = new EventNotifier();
-var resultManager = new TrainingResultManager();
-var chooseDifficulty = new TrainingDifficultyManager();
+Console.OutputEncoding = Encoding.Unicode;
+Console.InputEncoding = Encoding.Unicode;
 
-Console.WriteLine("Choose training difficulty:");
-Console.WriteLine("1. Easy");
-Console.WriteLine("2. Medium");
-Console.WriteLine("3. Hard");
-Console.Write("Enter your choice: ");
+        var eventNotifier = new EventNotifier();
+        var resultManager = new TrainingResultManager();
+        var chooseDifficulty = new TrainingDifficultyManager();
 
-int choice;
-while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 3)
-{
-    Console.WriteLine("Invalid choice. Please enter a number between 1 and 3.");
-    Console.Write("Enter your choice: ");
-}
+        while (true)
+        {
+            Console.WriteLine("Виберіть тип оцінювання (1 для Basic, 2 для Advanced):");
+            string accuracyChoice = Console.ReadLine();
+            IAccuracyCalculationStrategy accuracyStrategy;
 
-DifficultyLevel difficulty;
-switch (choice)
-{
-    case 1:
-        difficulty = DifficultyLevel.Easy;
-        break;
-    case 2:
-        difficulty = DifficultyLevel.Medium;
-        break;
-    case 3:
-        difficulty = DifficultyLevel.Hard;
-        break;
-    default:
-        throw new ArgumentException("Invalid choice.");
-}
+            switch (accuracyChoice)
+            {
+                case "1":
+                    accuracyStrategy = new BasicAccuracyStrategy();
+                    break;
+                case "2":
+                    accuracyStrategy = new AdvancedAccuracyStrategy();
+                    break;
+                default:
+                    Console.WriteLine("Неправильний вибір. Використовується Basic оцінювання за замовчуванням.");
+                    accuracyStrategy = new BasicAccuracyStrategy();
+                    break;
+            }
 
-var trainingSession = new TrainingSession(accuracyStrategy, eventNotifier, resultManager, chooseDifficulty, difficulty);
+            Console.WriteLine("Виберіть складність (1 для Easy, 2 для Medium, 3 для Hard):");
+            string difficultyChoice = Console.ReadLine();
+            DifficultyLevel difficulty;
 
-Console.WriteLine($"Training Session (Difficulty: {difficulty}):");
-Console.WriteLine("-------------------------------");
+            switch (difficultyChoice)
+            {
+                case "1":
+                    difficulty = DifficultyLevel.Easy;
+                    break;
+                case "2":
+                    difficulty = DifficultyLevel.Medium;
+                    break;
+                case "3":
+                    difficulty = DifficultyLevel.Hard;
+                    break;
+                default:
+                    Console.WriteLine("Неправильний вибір. Використовується Easy складність за замовчуванням.");
+                    difficulty = DifficultyLevel.Easy;
+                    break;
+            }
 
-double totalAccuracy = 0;
-double totalTime = 0;
+            Console.WriteLine("Введіть кількість підходів у сесії:");
+            int sessionCount;
+            while (!int.TryParse(Console.ReadLine(), out sessionCount) || sessionCount <= 0)
+            {
+                Console.WriteLine("Будь ласка, введіть дійсне число більше 0.");
+            }
 
-for (int i = 0; i < 5; i++)
-{
-    Console.WriteLine($"Training Session {i + 1}:");
-    Console.WriteLine("-------------------------------");
-    var sessionResult = trainingSession.StartSession();
-    totalAccuracy += double.Parse(sessionResult.Substring(0, sessionResult.Length - 1));
-    totalTime += trainingSession.GetTotalTimeInSeconds();
-    Console.WriteLine();
-}
+            for (int i = 0; i < sessionCount; i++)
+            {
+                var session = new TrainingSession(accuracyStrategy, eventNotifier, resultManager, chooseDifficulty, difficulty);
+                session.StartSession();
+            }
 
-string overallAccuracy = accuracyStrategy.CalculateOverallAccuracy();
-Console.WriteLine($"Overall Accuracy: {overallAccuracy}");
+            Console.WriteLine("Бажаєте зберегти відомість про проходження тестування у файл? (yes/no):");
+            string saveToFileChoice = Console.ReadLine();
 
-Console.WriteLine($"Total Training Time: {TimeSpan.FromSeconds(totalTime)}");
+            if (saveToFileChoice.Equals("yes", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Введіть назву файлу для збереження результатів:");
+                string fileName = Console.ReadLine();
+                resultManager.SaveResultsToFile(fileName);
+            }
+            var statistics = new TrainingStatistics(resultManager);
+            statistics.DisplayStatistics();
 
-resultManager.SaveResultsToFile("training_results.txt");
+            Console.WriteLine("Введіть 'exit' для завершення програми або будь-який інший текст для нового сеансу:");
+            string exitChoice = Console.ReadLine();
+            if (exitChoice.Equals("exit", StringComparison.OrdinalIgnoreCase))
+            {
+                break;
+            }
+        }

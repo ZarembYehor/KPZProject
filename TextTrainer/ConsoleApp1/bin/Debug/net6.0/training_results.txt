@@ -1,5 +1,5 @@
-Start Time: 17.05.2024 12:23:10, End Time: 17.05.2024 12:23:12, Accuracy: 0,00%
-Start Time: 17.05.2024 12:23:11, End Time: 17.05.2024 12:23:15, Accuracy: 6,90%
-Start Time: 17.05.2024 12:23:13, End Time: 17.05.2024 12:23:19, Accuracy: 0,00%
-Start Time: 17.05.2024 12:23:16, End Time: 17.05.2024 12:23:24, Accuracy: 7,14%
-Start Time: 17.05.2024 12:23:19, End Time: 17.05.2024 12:23:30, Accuracy: 0,00%
+Start Time: 17.05.2024 14:40:54, End Time: 17.05.2024 14:40:58, Accuracy: 2,50%
+Start Time: 17.05.2024 14:40:57, End Time: 17.05.2024 14:41:04, Accuracy: 3,57%
+Start Time: 17.05.2024 14:40:59, End Time: 17.05.2024 14:41:09, Accuracy: 9,38%
+Start Time: 17.05.2024 14:41:02, End Time: 17.05.2024 14:41:14, Accuracy: 10,71%
+Start Time: 17.05.2024 14:41:05, End Time: 17.05.2024 14:41:20, Accuracy: 3,23%

@@ -57,7 +57,14 @@ namespace ConsoleApp1
 
             foreach (var result in _sessionResults)
             {
-                totalAccuracy += result.Accuracy;
+                if (result.IsAdvancedStrategy)
+                {
+                    totalAccuracy += (double)result.CorrectChars / result.TotalChars * 100;
+                }
+                else
+                {
+                    totalAccuracy += result.AccuracyPercentage;
+                }
                 totalTime += (result.EndTime - result.StartTime).TotalSeconds;
             }
 
@@ -68,6 +75,33 @@ namespace ConsoleApp1
             Console.WriteLine($"Average Accuracy: {averageAccuracy:F2}%");
             Console.WriteLine($"Average Time Per Session: {averageTimePerSession:F2} seconds");
         }
+
+        public TimeSpan GetAverageTrainingTime()
+        {
+            double totalSeconds = _sessionResults.Select(r => (r.EndTime - r.StartTime).TotalSeconds).Sum();
+            int count = _sessionResults.Count;
+            return TimeSpan.FromSeconds(totalSeconds / count);
+        }
+
+        public double GetBestAccuracy()
+        {
+            return _sessionResults.Max(r => r.IsAdvancedStrategy
+                ? (double)r.CorrectChars / r.TotalChars * 100
+                : r.AccuracyPercentage);
+        }
+
+        public double GetWorstAccuracy()
+        {
+            return _sessionResults.Min(r => r.IsAdvancedStrategy
+                ? (double)r.CorrectChars / r.TotalChars * 100
+                : r.AccuracyPercentage);
+        }
+
+        public int GetTotalTrainingSessions()
+        {
+            return _sessionResults.Count;
+        }
     }
+
 
 }

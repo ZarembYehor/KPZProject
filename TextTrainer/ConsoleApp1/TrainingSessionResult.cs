@@ -10,11 +10,21 @@ namespace ConsoleApp1
     {
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public double Accuracy { get; set; }
+        public double AccuracyPercentage { get; set; }
+        public int CorrectChars { get; set; }
+        public int TotalChars { get; set; }
+        public bool IsAdvancedStrategy { get; set; }
 
         public override string ToString()
         {
-            return $"Start Time: {StartTime}, End Time: {EndTime}, Accuracy: {Accuracy:F2}%";
+            if (IsAdvancedStrategy)
+            {
+                return $"Start Time: {StartTime}, End Time: {EndTime}, Accuracy: {CorrectChars} / {TotalChars}";
+            }
+            else
+            {
+                return $"Start Time: {StartTime}, End Time: {EndTime}, Accuracy: {AccuracyPercentage:F2}%";
+            }
         }
     }
 }
