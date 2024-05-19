@@ -1,0 +1,15 @@
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.exe
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.deps.json
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.runtimeconfig.json
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.dll
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.pdb
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.AssemblyReference.cache
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfo.cs
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.dll
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\refint\ConsoleApp1.dll
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.pdb
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.genruntimeconfig.cache
+D:\TextTrainer\KPZProject\TextTrainer\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleApp1.dll
