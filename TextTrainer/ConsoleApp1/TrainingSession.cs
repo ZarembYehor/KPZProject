@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -26,17 +22,18 @@ namespace ConsoleApp1
             _difficulty = difficulty;
         }
 
-        public string StartSession()
+        public void StartSession()
         {
             _stopwatch.Start();
+
             var textProvider = TextProvider.Instance;
             var randomWords = textProvider.GetRandomWords(_chooseDifficulty.GetWordCountForDifficulty(_difficulty));
             var textToType = string.Join(" ", randomWords);
+
             Console.WriteLine("Type the following text:");
             Console.WriteLine(textToType);
 
             var userInput = Console.ReadLine();
-
             string sessionResult = _accuracyStrategy.CalculateAccuracy(textToType, userInput);
 
             Console.WriteLine($"Your result: {sessionResult}");
@@ -45,39 +42,33 @@ namespace ConsoleApp1
 
             _stopwatch.Stop();
 
+            RecordResult(sessionResult);
+
+            _stopwatch.Reset();
+        }
+
+        private void RecordResult(string sessionResult)
+        {
+            var result = new TrainingSessionResult
+            {
+                StartTime = DateTime.Now,
+                EndTime = DateTime.Now.AddSeconds(_stopwatch.Elapsed.TotalSeconds)
+            };
+
             if (_accuracyStrategy is AdvancedAccuracyStrategy)
             {
                 var parts = sessionResult.Split('/');
-                int correctChars = int.Parse(parts[0].Trim());
-                int totalChars = int.Parse(parts[1].Trim());
-
-                _resultManager.AddResult(new TrainingSessionResult
-                {
-                    StartTime = DateTime.Now,
-                    EndTime = DateTime.Now.AddSeconds(_stopwatch.Elapsed.TotalSeconds),
-                    CorrectChars = correctChars,
-                    TotalChars = totalChars,
-                    IsAdvancedStrategy = true
-                });
+                result.CorrectChars = int.Parse(parts[0].Trim());
+                result.TotalChars = int.Parse(parts[1].Trim());
+                result.IsAdvancedStrategy = true;
             }
             else
             {
-                _resultManager.AddResult(new TrainingSessionResult
-                {
-                    StartTime = DateTime.Now,
-                    EndTime = DateTime.Now.AddSeconds(_stopwatch.Elapsed.TotalSeconds),
-                    AccuracyPercentage = double.Parse(sessionResult),
-                    IsAdvancedStrategy = false
-                });
+                result.AccuracyPercentage = double.Parse(sessionResult);
+                result.IsAdvancedStrategy = false;
             }
 
-            return sessionResult;
-        }
-
-        public double GetTotalTimeInSeconds()
-        {
-            return _stopwatch.Elapsed.TotalSeconds;
+            _resultManager.AddResult(result);
         }
     }
-
 }

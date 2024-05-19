@@ -1,51 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
     public class BasicAccuracyStrategy : IAccuracyCalculationStrategy
     {
-        private List<string> sessionResults = new List<string>();
+        private List<double> sessionAccuracies = new List<double>();
 
         public string CalculateAccuracy(string expectedText, string actualText)
         {
+            int correctChars = expectedText.Zip(actualText, (e, a) => e == a).Count(isCorrect => isCorrect);
             int totalChars = expectedText.Length;
-            int correctChars = 0;
-
-            for (int i = 0; i < totalChars; i++)
-            {
-                if (i < actualText.Length && expectedText[i] == actualText[i])
-                {
-                    correctChars++;
-                }
-            }
 
             double accuracy = (double)correctChars / totalChars * 100;
+            sessionAccuracies.Add(accuracy);
 
-            string result = $"{accuracy:F2}";
-            this.sessionResults.Add(result);
-
-            return result;
+            return $"{accuracy:F2}";
         }
 
         public string CalculateOverallAccuracy()
         {
-            double totalAccuracy = 0;
+            if (sessionAccuracies.Count == 0) return "0.00";
 
-            foreach (string result in this.sessionResults)
-            {
-                Console.WriteLine(result);
-                if (double.TryParse(result, out double accuracy))
-                {
-                    totalAccuracy += accuracy;
-                }
-            }
-
-            double overallAccuracy = totalAccuracy / this.sessionResults.Count;
-            return $"Overall Accuracy: {overallAccuracy:F2}%";
+            double overallAccuracy = sessionAccuracies.Average();
+            return $"{overallAccuracy:F2}%";
         }
     }
 }

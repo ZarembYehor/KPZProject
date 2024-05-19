@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -13,23 +11,14 @@ namespace ConsoleApp1
 
         public string CalculateAccuracy(string expectedText, string actualText)
         {
+            int correctChars = expectedText.Zip(actualText, (e, a) => e == a).Count(isCorrect => isCorrect);
             int totalChars = expectedText.Length;
-            int correctChars = 0;
-
-            for (int i = 0; i < totalChars; i++)
-            {
-                if (i < actualText.Length && expectedText[i] == actualText[i])
-                {
-                    correctChars++;
-                }
-            }
 
             sessionCorrectChars.Add(correctChars);
             sessionTotalChars.Add(totalChars);
 
             return $"{correctChars} / {totalChars}";
         }
-
         public string CalculateOverallAccuracy()
         {
             int totalCorrectChars = sessionCorrectChars.Sum();
@@ -38,5 +27,4 @@ namespace ConsoleApp1
             return $"{totalCorrectChars} / {totalChars}";
         }
     }
-
 }
