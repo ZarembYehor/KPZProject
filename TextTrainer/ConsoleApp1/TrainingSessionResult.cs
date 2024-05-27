@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1;
+﻿using System.Text;
+
+namespace ConsoleApp1;
 
 public class TrainingSessionResult
 {
@@ -13,11 +15,27 @@ public class TrainingSessionResult
     {
         if (IsAdvancedStrategy)
         {
-            return $"Start Time: {StartTime}, End Time: {EndTime}, Correct Chars: {CorrectChars}, Total Chars: {TotalChars}, Accuracy: {((double)CorrectChars / TotalChars * 100):F2}%";
+            var sb = new StringBuilder();
+
+            sb.Append("Start Time: ").Append(StartTime)
+              .Append(", End Time: ").Append(EndTime)
+              .Append(", Correct Chars: ").Append(CorrectChars)
+              .Append(", Total Chars: ").Append(TotalChars)
+              .Append(", Accuracy: ").Append(((double)CorrectChars / TotalChars * 100).ToString("F2")).Append('%');
+
+            string result = sb.ToString();
+            return result;
         }
         else
         {
-            return $"Start Time: {StartTime}, End Time: {EndTime}, Accuracy: {AccuracyPercentage:F2}%";
+            var sb = new StringBuilder();
+
+            sb.Append("Start Time: ").Append(StartTime)
+              .Append(", End Time: ").Append(EndTime)
+              .Append(", Accuracy: ").Append(AccuracyPercentage.ToString("F2")).Append('%');
+
+            string result = sb.ToString();
+            return result;
         }
     }
 }

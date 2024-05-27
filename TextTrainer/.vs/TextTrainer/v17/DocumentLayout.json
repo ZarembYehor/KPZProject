@@ -1,66 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\My_\\Ref3\\TextTrainer\\",
+  "WorkspaceRootPath": "C:\\Users\\05naz\\KPZProject\\TextTrainer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\trainingstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\trainingstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\trainingsessionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\trainingsessionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\trainingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\trainingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\trainingresultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\trainingresultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\trainingdifficultymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\trainingdifficultymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\textprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\textprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\05naz\\kpzproject\\texttrainer\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\overallaccuracycalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\overallaccuracycalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\isubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\isubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\iaccuracycalculationstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\iaccuracycalculationstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\eventnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\eventnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\consoleobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\consoleobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\basicaccuracystrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\basicaccuracystrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|d:\\my_\\ref3\\texttrainer\\consoleapp1\\advancedaccuracystrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F8DDBF3-8548-4401-B213-43BE55759BDE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\advancedaccuracystrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,205 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\Program.cs",
-              "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAAAFkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:12.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TextProvider.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TextProvider.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\TextProvider.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TextProvider.cs",
-              "RelativeToolTip": "ConsoleApp1\\TextProvider.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAGMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TrainingDifficultyManager.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingDifficultyManager.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\TrainingDifficultyManager.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingDifficultyManager.cs",
-              "RelativeToolTip": "ConsoleApp1\\TrainingDifficultyManager.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAuwCEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TrainingResultManager.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingResultManager.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\TrainingResultManager.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingResultManager.cs",
-              "RelativeToolTip": "ConsoleApp1\\TrainingResultManager.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAmwHwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TrainingSession.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingSession.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\TrainingSession.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingSession.cs",
-              "RelativeToolTip": "ConsoleApp1\\TrainingSession.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAAEkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TrainingSessionResult.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingSessionResult.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\TrainingSessionResult.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingSessionResult.cs",
-              "RelativeToolTip": "ConsoleApp1\\TrainingSessionResult.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAUwBcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.429Z",
-              "EditorCaption": ""
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TrainingStatistics.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingStatistics.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\TrainingStatistics.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\TrainingStatistics.cs",
-              "RelativeToolTip": "ConsoleApp1\\TrainingStatistics.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAqwBsAAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\05naz\\KPZProject\\TextTrainer\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\05naz\\KPZProject\\TextTrainer\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OverallAccuracyCalculator.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\OverallAccuracyCalculator.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\OverallAccuracyCalculator.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\OverallAccuracyCalculator.cs",
-              "RelativeToolTip": "ConsoleApp1\\OverallAccuracyCalculator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ISubject.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\ISubject.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\ISubject.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\ISubject.cs",
-              "RelativeToolTip": "ConsoleApp1\\ISubject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IObserver.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\IObserver.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\IObserver.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\IObserver.cs",
-              "RelativeToolTip": "ConsoleApp1\\IObserver.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IAccuracyCalculationStrategy.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\IAccuracyCalculationStrategy.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\IAccuracyCalculationStrategy.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\IAccuracyCalculationStrategy.cs",
-              "RelativeToolTip": "ConsoleApp1\\IAccuracyCalculationStrategy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EventNotifier.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\EventNotifier.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\EventNotifier.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\EventNotifier.cs",
-              "RelativeToolTip": "ConsoleApp1\\EventNotifier.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAqwCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ConsoleObserver.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\ConsoleObserver.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\ConsoleObserver.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\ConsoleObserver.cs",
-              "RelativeToolTip": "ConsoleApp1\\ConsoleObserver.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BasicAccuracyStrategy.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\BasicAccuracyStrategy.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\BasicAccuracyStrategy.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\BasicAccuracyStrategy.cs",
-              "RelativeToolTip": "ConsoleApp1\\BasicAccuracyStrategy.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAA+wB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AdvancedAccuracyStrategy.cs",
-              "DocumentMoniker": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\AdvancedAccuracyStrategy.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\AdvancedAccuracyStrategy.cs",
-              "ToolTip": "D:\\My_\\Ref3\\TextTrainer\\ConsoleApp1\\AdvancedAccuracyStrategy.cs",
-              "RelativeToolTip": "ConsoleApp1\\AdvancedAccuracyStrategy.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAA+wB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:52:13.383Z",
+              "WhenOpened": "2024-05-19T19:52:12.981Z",
               "EditorCaption": ""
             }
           ]

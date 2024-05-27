@@ -12,5 +12,9 @@ namespace ConsoleApp1
         {
             Console.WriteLine($"Observer received message: {message}");
         }
+        public void OnNotificationReceived(string notification)
+        {
+            Console.WriteLine($"Observer received notification: {notification}");
+        }
     }
 }

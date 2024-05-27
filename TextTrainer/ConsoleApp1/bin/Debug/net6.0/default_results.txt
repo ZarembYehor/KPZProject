@@ -1,5 +1,5 @@
-Start Time: 20.05.2024 0:05:08, End Time: 20.05.2024 0:05:20, Accuracy: 100,00%
-Best Accuracy: 100,00%
-Best Time: 11,7724246 seconds
-Selected Strategy: Basic
+Start Time: 27.05.2024 21:38:18, End Time: 27.05.2024 21:38:26, Correct Chars: 14, Total Chars: 15, Accuracy: 93,33%
+Best Accuracy: 93,33%
+Best Time: 7,7742848 seconds
+Selected Strategy: Advanced
 Total Sessions: 1
