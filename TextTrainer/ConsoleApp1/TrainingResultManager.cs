@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1;
+﻿using System.Text;
+
+namespace ConsoleApp1;
 
 public class TrainingResultManager
 {
@@ -105,9 +107,12 @@ public class TrainingResultManager
         double averageAccuracy = totalAccuracy / sessionCount;
         double averageTimePerSession = totalTime / sessionCount;
 
-        Console.WriteLine("Розширена статистика:");
-        Console.WriteLine($"Середня точність: {averageAccuracy:F2}%");
-        Console.WriteLine($"Середній час на сесію: {averageTimePerSession:F2} секунд");
+        var extendedStatisticsBuilder = new StringBuilder();
+        extendedStatisticsBuilder.AppendLine("Розширена статистика:");
+        extendedStatisticsBuilder.AppendLine($"Середня точність: **{averageAccuracy:F2}%**");
+        extendedStatisticsBuilder.AppendLine($"Середній час на сесію: **{averageTimePerSession:F2}** секунд");
+
+        Console.WriteLine(extendedStatisticsBuilder.ToString());
     }
 
     public TimeSpan GetAverageTrainingTime()

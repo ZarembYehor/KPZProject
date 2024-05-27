@@ -30,5 +30,12 @@ namespace ConsoleApp1
                 observer.Update("Training session completed");
             }
         }
+        public void AlertObservers()
+        {
+            foreach (var observer in _observers)
+            {
+                observer.OnNotificationReceived("Training session completed");
+            }
+        }
     }
 }

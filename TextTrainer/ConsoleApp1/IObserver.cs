@@ -9,5 +9,6 @@ namespace ConsoleApp1
     public interface IObserver
     {
         void Update(string message);
+        void OnNotificationReceived(string notification);
     }
 }
